@@ -1,7 +1,6 @@
-import { Router, Request, Response } from "express";
+import { Request, Response } from "express";
 import { UseCase } from "../../usecase";
 import { HttpError } from "../../errors/HttpError";
-import { FetchPokemons } from "./useCases/FetchPokemons";
 
 export class GetController {
   readonly #useCase: UseCase;
