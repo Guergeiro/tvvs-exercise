@@ -11,7 +11,7 @@ export class GetController {
 
   public async handle(request: Request, response: Response) {
     try {
-      const {results} = await this.#useCase.execute();
+      const { results } = await this.#useCase.execute();
       return response.status(200).send(results);
     } catch (err) {
       if (err instanceof HttpError) {

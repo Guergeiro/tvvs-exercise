@@ -1,5 +1,3 @@
-var firstname = "nikhil1"
-
 var lastname = "breno"
 var firstname = "salles"
 document.getElementById('demo').innerHTML = `Hey i am ${firstname} ${lastname}, My name coming from Javascript`
