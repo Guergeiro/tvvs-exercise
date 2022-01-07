@@ -17,8 +17,6 @@ export class GetController {
     } catch (err) {
       if (err instanceof HttpError) {
         return response.status(err.status).send({ error: err.message });
-      } else if (err instanceof HttpError) {
-        return response.status(err.status).send({ error: err.message });
       }
       const newError = new HttpError(500);
       return response.status(500).send({ error: newError.message });

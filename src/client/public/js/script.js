@@ -6,10 +6,6 @@ document.getElementById('demo').innerHTML = `Hey i am ${firstname} ${lastname}, 
 
 var a = NaN;
 
-if (a === NaN) {  // Noncompliant; always false
-  console.log("a is not a number");  // this is dead code
-}
-
 function populateDivs(arr) {
   const rows = [];
   for (const {name, url} of arr) {
