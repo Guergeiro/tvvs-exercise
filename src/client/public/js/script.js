@@ -1,24 +1,28 @@
-var lastname = "breno"
-var firstname = "salles"
-document.getElementById('demo').innerHTML = `Hey i am ${firstname} ${lastname}, My name coming from Javascript`
+var lastname = "breno";
+var firstname = "salles";
+document.getElementById(
+  "demo"
+).innerHTML = `Hey i am ${firstname} ${lastname}, My name coming from Javascript`;
 
 var a = NaN;
 
 function populateDivs(arr) {
   const rows = [];
-  for (const {name, url} of arr) {
+  for (const { name, url } of arr) {
     const tr = document.createElement("tr");
-    tr.innerHTML = `<td>${name}</td><td><a href="${url}">Link</a></td>`
+    tr.innerHTML = `<td>${name}</td><td><a href="${url}">Link</a></td>`;
     rows.push(tr);
   }
-  const tbody = document.querySelector("table#pokemons tbody")
+  const tbody = document.querySelector("table#pokemons tbody");
   for (const row of rows) {
-    tbody.appendChild(row)
+    tbody.appendChild(row);
   }
 }
 
 async function getPokemons() {
-  fetch("http://0.0.0.0:60000/pokemons").then(res => res.json()).then(json => populateDivs(json))
+  fetch("http://0.0.0.0:60000/pokemons")
+    .then((res) => res.json())
+    .then((json) => populateDivs(json));
 }
 
 setTimeout(function () {
